@@ -1,0 +1,40 @@
+<div class="container">
+
+    <h2>Employees Total Hours Worked</h2>
+  
+    <table>
+      <thead>
+        <tr>
+          <th>Employee Name</th>
+          <th>Total Hours Worked</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let emp of result" [class.highlight]="emp.total < 100">
+          <td>{{ emp.name }}</td>
+          <td>{{ emp.total }}</td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <h2>Work Hours Distribution</h2>
+
+          <div style="max-width: 500px; margin: auto;">
+            <div *ngIf="isBrowser">
+              <canvas
+                baseChart
+                [data]="pieChartData"
+                [options]="pieChartOptions"
+                [type]="'pie'"
+                [plugins]="[ChartDataLabels]">
+              </canvas>
+            </div>
+          </div>
+          
+      
+
+    <div id="chartContainer">
+        <canvas id="myPieChart"></canvas>
+      </div>
+  
+  </div>
