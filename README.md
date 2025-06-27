@@ -1,3 +1,12 @@
+#API Key
+Inside the src, create environments folder, copy from email or create the file environment.ts, and make sure it contains the following structure:
+
+export const environment = {
+  production: false,
+  apiUrl: 'API_URL_HERE',
+  apiKey: 'API_KEY_HERE'
+};
+
 # AngularTest
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.2.
